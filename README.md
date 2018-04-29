@@ -1,3 +1,3 @@
 # Concurrency-CoreData
 
-#Doing Concurrency task using Multiple ManagedObjectContext.
+Doing Concurrency task using Multiple ManagedObjectContext.

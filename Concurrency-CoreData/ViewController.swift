@@ -64,14 +64,14 @@ class ViewController: UIViewController {
                     for tagObj  in allTagsArray {
                         let unwrapTagObj : TagEntity = tagObj
                         var index = 0
-//                        for _ in 0...10 {
+                        for _ in 0...10 {
                             unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.writerMOC)!)
                             index += 1
 
                             if (index % 10) == 0 {
                                 appDelegate.coreDataHelperObj?.saveWriterContext()
                             }
-//                        }
+                        }
                     }
                     if appDelegate.coreDataHelperObj?.writerMOC.hasChanges == true {
                         appDelegate.coreDataHelperObj?.saveWriterContext()

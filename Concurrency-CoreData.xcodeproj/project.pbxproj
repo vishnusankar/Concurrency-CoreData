@@ -106,12 +106,12 @@
 				678A7B7C2093292A00F433BC /* TagsModel.xcdatamodeld */,
 				678A7B4E209312EE00F433BC /* AppDelegate.swift */,
 				678A7B50209312EE00F433BC /* ViewController.swift */,
+				678A7B8F209564AD00F433BC /* DetailViewController.swift */,
 				678A7B52209312EE00F433BC /* Main.storyboard */,
 				678A7B55209312EF00F433BC /* Assets.xcassets */,
 				678A7B57209312EF00F433BC /* LaunchScreen.storyboard */,
 				678A7B5A209312F000F433BC /* Info.plist */,
 				678A7B7F2093299900F433BC /* CoreDataHelper.swift */,
-				678A7B8F209564AD00F433BC /* DetailViewController.swift */,
 			);
 			path = "Concurrency-CoreData";
 			sourceTree = "<group>";

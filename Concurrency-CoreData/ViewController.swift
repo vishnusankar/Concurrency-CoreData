@@ -54,8 +54,8 @@ class ViewController: UIViewController {
     }
     @IBAction func copyButtonMethod(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        appDelegate.coreDataHelperObj?.workerMOC.perform({
+    
+        appDelegate.coreDataHelperObj?.writerMOC.perform({
             
             do {
                 let fetchReq = NSFetchRequest<TagEntity>(entityName: "TagEntity")
@@ -64,17 +64,17 @@ class ViewController: UIViewController {
                     for tagObj  in allTagsArray {
                         let unwrapTagObj : TagEntity = tagObj
                         var index = 0
-                        for _ in 0...500 {
-                            unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.workerMOC)!)
+//                        for _ in 0...10 {
+                            unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.writerMOC)!)
                             index += 1
-                            
-                            if (index % 50) == 0 {
-                                appDelegate.coreDataHelperObj?.saveWorkerContext()
+
+                            if (index % 10) == 0 {
+                                appDelegate.coreDataHelperObj?.saveWriterContext()
                             }
-                        }
+//                        }
                     }
-                    if appDelegate.coreDataHelperObj?.workerMOC.hasChanges == true {
-                        appDelegate.coreDataHelperObj?.saveWorkerContext()
+                    if appDelegate.coreDataHelperObj?.writerMOC.hasChanges == true {
+                        appDelegate.coreDataHelperObj?.saveWriterContext()
                     }
                 }
             } catch let error as NSError {
@@ -132,6 +132,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
         let viewCont = segue.destination as! DetailViewController
         let selectedCell = sender as? UITableViewCell
         let view = selectedCell?.contentView.subviews
@@ -139,7 +141,14 @@ class ViewController: UIViewController {
             viewCont.tagValue = label.text!
         }
         let indexPath = self.tabelView.indexPath(for: selectedCell!)
-        viewCont.managedObject = self.fetchedResultCont.object(at: indexPath!)
+        let objectId = self.fetchedResultCont.object(at: indexPath!)
+        
+        do {
+            viewCont.managedObject = try appDelegate.coreDataHelperObj?.mainMOC.existingObject(with: objectId.objectID) as! TagEntity
+        } catch let error as NSError {
+            fatalError("Selected object ID not available at context")
+        }
+        
     }
 }
 

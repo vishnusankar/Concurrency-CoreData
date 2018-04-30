@@ -71,35 +71,43 @@ class CoreDataHelper {
         return container
     }()
     
-    func saveWorkerContext() -> Bool {
+    func saveWorkerContext() {
         //2nd level child save
-        guard workerMOC.hasChanges else { return false }
+        guard workerMOC.hasChanges else { return }
         
-        do {
-            try workerMOC.save()
-        } catch let nserror as NSError {
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-        
-        //1st level child save
-        guard mainMOC.hasChanges else { return false }
-        
-        do {
-            try mainMOC.save()
-        } catch let nserror as NSError {
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-        
-        //Root level save
-        guard writerMOC.hasChanges else { return false }
-        
-        do {
-            try writerMOC.save()
-        } catch let nserror as NSError {
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-        
-        return true
+        workerMOC.perform({
+            do {
+                print("worker started")
+                try self.workerMOC.save()
+                print("worker Saved")
+            } catch let nserror as NSError {
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+            
+            //1st level child save
+            guard self.mainMOC.hasChanges else { return }
+                
+            do {
+                print("Main started")
+                try self.mainMOC.save()
+                print("Main Saved")
+            } catch let nserror as NSError {
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+            
+            //Root level save
+            guard self.writerMOC.hasChanges else { return }
+            
+            self.writerMOC.perform({
+                do {
+                    print("writer started")
+                    try self.writerMOC.save()
+                    print("writer Saved")
+                } catch let nserror as NSError {
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            })
+        })
     }
     
     func saveMainContext() -> Bool {
@@ -116,6 +124,7 @@ class CoreDataHelper {
         //Root level save
         guard writerMOC.hasChanges else { return false }
         
+        
         do {
             try writerMOC.save()
         } catch let nserror as NSError {
@@ -131,7 +140,9 @@ class CoreDataHelper {
         guard writerMOC.hasChanges else { return false }
         
         do {
+            print("writer started")
             try writerMOC.save()
+            print("writer saved")
         } catch let nserror as NSError {
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }

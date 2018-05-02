@@ -25,6 +25,6 @@ class DetailViewController : UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObject?.tag = self.textField.text
         managedObject?.lastUpdated = Date()
-        appDelegate.coreDataHelperObj?.saveMainContext()
+        appDelegate.coreDataHelperObj?.saveWriterContext()
     }
 }

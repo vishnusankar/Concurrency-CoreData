@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     func sortingManagedObjects(ascendingOrder:Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let fetchrequest = NSFetchRequest<TagEntity>(entityName: "TagEntity")
+        fetchrequest.fetchBatchSize = 20
         let sortDescriptor = NSSortDescriptor(key: #keyPath(TagEntity.tag), ascending: ascendingOrder)
         fetchrequest.sortDescriptors = [sortDescriptor]
         fetchedResultCont.delegate = nil
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
         
         do {
             try fetchedResultCont.performFetch()
-            appDelegate.coreDataHelperObj?.saveMainContext()
+//            appDelegate.coreDataHelperObj?.saveMainContext()
             self.tabelView.reloadData()
         } catch let error as NSError {
             fatalError("\(error.userInfo)")
@@ -144,7 +145,7 @@ class ViewController: UIViewController {
         let objectId = self.fetchedResultCont.object(at: indexPath!)
         
         do {
-            viewCont.managedObject = try appDelegate.coreDataHelperObj?.mainMOC.existingObject(with: objectId.objectID) as! TagEntity
+            viewCont.managedObject = try appDelegate.coreDataHelperObj?.writerMOC.existingObject(with: objectId.objectID) as! TagEntity
         } catch let error as NSError {
             fatalError("Selected object ID not available at context")
         }

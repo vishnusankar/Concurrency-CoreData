@@ -72,9 +72,9 @@ class ViewController: UIViewController {
                             unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.workerMOC)!)
                             index += 1
 
-//                            if (index % 10) == 0 {
-//                                appDelegate.coreDataHelperObj?.saveWriterContext()
-//                            }
+                            if (index % 10) == 0 {
+                                appDelegate.coreDataHelperObj?.saveWorkerContext()
+                            }
                         }
                     }
                     if appDelegate.coreDataHelperObj?.workerMOC.hasChanges == true {
@@ -155,12 +155,12 @@ class ViewController: UIViewController {
     }
     
     @objc func managedObjectContextDidSave(notification : NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        DispatchQueue.main.async {
-        
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.coreDataHelperObj?.mainMOC.mergeChanges(fromContextDidSave: notification as Notification)
-        }
+//        guard let userInfo = notification.userInfo else { return }
+//        DispatchQueue.main.async {
+//        
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.coreDataHelperObj?.mainMOC.mergeChanges(fromContextDidSave: notification as Notification)
+//        }
     }
 }
 

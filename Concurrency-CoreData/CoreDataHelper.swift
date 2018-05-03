@@ -12,6 +12,13 @@ import CoreData
 class CoreDataHelper {
     
     //1st level Child
+    lazy var workerMOC : NSManagedObjectContext = {
+        var tempMainMOC = NSManagedObjectContext(concurrencyType:.privateQueueConcurrencyType)
+        tempMainMOC.parent = self.writerMOC
+        return tempMainMOC
+    }()
+    
+    //2nd level Child
     lazy var mainMOC : NSManagedObjectContext = {
         var tempMainMOC = NSManagedObjectContext(concurrencyType:.mainQueueConcurrencyType)
         tempMainMOC.parent = self.writerMOC
@@ -53,6 +60,33 @@ class CoreDataHelper {
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         return coordinator
     }()
+    
+    func saveWorkerContext() {
+        
+        //1st level child save
+        guard workerMOC.hasChanges else { return }
+        
+        do {
+                print("worker started")
+                try self.workerMOC.save()
+                print("worker ended")
+            } catch let nserror as NSError {
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        
+            //Root level save
+            guard self.writerMOC.hasChanges else { return }
+        
+            self.writerMOC.perform({
+                do {
+                    print("writer started")
+                    try self.writerMOC.save()
+                    print("writer Ended")
+                } catch let nserror as NSError {
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            })
+    }
     
     func saveMainContext() {
         

@@ -56,26 +56,26 @@ class ViewController: UIViewController {
     @IBAction func copyButtonMethod(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-        appDelegate.coreDataHelperObj?.writerMOC.perform({
+        appDelegate.coreDataHelperObj?.workerMOC.perform({
             
             do {
                 let fetchReq = NSFetchRequest<TagEntity>(entityName: "TagEntity")
                 
-                if let allTagsArray = try appDelegate.coreDataHelperObj?.mainMOC.fetch(fetchReq) {
+                if let allTagsArray = try appDelegate.coreDataHelperObj?.workerMOC.fetch(fetchReq) {
                     for tagObj  in allTagsArray {
                         let unwrapTagObj : TagEntity = tagObj
                         var index = 0
                         for _ in 0...10 {
-                            unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.writerMOC)!)
+                            unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.workerMOC)!)
                             index += 1
 
-                            if (index % 10) == 0 {
-                                appDelegate.coreDataHelperObj?.saveWriterContext()
-                            }
+//                            if (index % 10) == 0 {
+//                                appDelegate.coreDataHelperObj?.saveWriterContext()
+//                            }
                         }
                     }
-                    if appDelegate.coreDataHelperObj?.writerMOC.hasChanges == true {
-                        appDelegate.coreDataHelperObj?.saveWriterContext()
+                    if appDelegate.coreDataHelperObj?.workerMOC.hasChanges == true {
+                        appDelegate.coreDataHelperObj?.saveWorkerContext()
                     }
                 }
             } catch let error as NSError {

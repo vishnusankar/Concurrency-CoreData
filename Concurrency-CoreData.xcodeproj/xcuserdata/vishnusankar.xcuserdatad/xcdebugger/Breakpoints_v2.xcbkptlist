@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916375"
+            timestampString = "547008943.500649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916502"
+            timestampString = "547008943.50138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916647"
+            timestampString = "547008943.501878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "controllerDidChangeContent(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916767"
+            timestampString = "547008943.502359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -86,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916865"
+            timestampString = "547008943.502833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -102,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.916947"
+            timestampString = "547008943.5032949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -118,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.917027"
+            timestampString = "547008943.503754"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,7 +134,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.917109"
+            timestampString = "547008943.50428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -150,7 +150,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.917596"
+            timestampString = "547008943.504411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -166,7 +166,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.917938"
+            timestampString = "547008943.5045381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -182,7 +182,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.918234"
+            timestampString = "547008943.504662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
@@ -198,7 +198,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.918524"
+            timestampString = "547008943.504789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -246,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.918812"
+            timestampString = "547008943.504913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "sortingManagedObjects(ascendingOrder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -262,11 +262,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.918887"
+            timestampString = "547008943.505636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "sortingManagedObjects(ascendingOrder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -274,11 +274,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.918959"
+            timestampString = "547008943.506346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -290,11 +290,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.919241"
+            timestampString = "547008943.506475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -306,11 +306,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.9195271"
+            timestampString = "547008943.5066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -319,14 +319,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in Concurrency_CoreData.CoreDataHelper.saveMainContext() -&gt; ()"
                   moduleName = "Concurrency-CoreData"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vishnusankar/Documents/Tried%20Examples/Swift/Concurrency-CoreData/Concurrency-CoreData/CoreDataHelper.swift"
-                  timestampString = "547005047.905985"
+                  timestampString = "547006352.053303"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -334,14 +334,14 @@
                   offsetFromSymbolStart = "687">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Concurrency_CoreData.CoreDataHelper.saveMainContext() -&gt; ()"
                   moduleName = "Concurrency-CoreData"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vishnusankar/Documents/Tried%20Examples/Swift/Concurrency-CoreData/Concurrency-CoreData/CoreDataHelper.swift"
-                  timestampString = "547005047.9084539"
+                  timestampString = "547006352.05793"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "110"
@@ -358,11 +358,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.919812"
+            timestampString = "547008943.506723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -370,11 +370,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.9199409"
+            timestampString = "547008943.507394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -390,7 +390,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/CoreDataHelper.swift"
-            timestampString = "547005041.920204"
+            timestampString = "547008943.507488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -406,11 +406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.920457"
+            timestampString = "547008943.507571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
             <Locations>
@@ -422,12 +422,12 @@
                   moduleName = "Concurrency-CoreData"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vishnusankar/Documents/Tried%20Examples/Swift/Concurrency-CoreData/Concurrency-CoreData/ViewController.swift"
-                  timestampString = "547005047.930061"
+                  timestampString = "547008753.736245"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "297">
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "322">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -437,11 +437,11 @@
                   moduleName = "Concurrency-CoreData"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vishnusankar/Documents/Tried%20Examples/Swift/Concurrency-CoreData/Concurrency-CoreData/ViewController.swift"
-                  timestampString = "547005047.932532"
+                  timestampString = "547008753.739349"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
                   offsetFromSymbolStart = "26">
                </Location>
             </Locations>
@@ -454,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005041.920516"
+            timestampString = "547008943.507984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -466,17 +466,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concurrency-CoreData/ViewController.swift"
-            timestampString = "547005427.663221"
+            timestampString = "547008943.508386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "copyButtonMethod(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Concurrency-CoreData/CoreDataHelper.swift"
+            timestampString = "547008943.508779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "writerMOC"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

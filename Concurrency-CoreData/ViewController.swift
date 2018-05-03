@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.fetchedResultCont = self.tagEntityFetchedResultController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        NotificationCenter.default.addObserver(self, selector: #selector(managedObjectContextDidSave), name: .NSManagedObjectContextDidSave, object: appDelegate.coreDataHelperObj?.workerMOC)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -149,7 +152,15 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             fatalError("Selected object ID not available at context")
         }
+    }
+    
+    @objc func managedObjectContextDidSave(notification : NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        DispatchQueue.main.async {
         
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.coreDataHelperObj?.mainMOC.mergeChanges(fromContextDidSave: notification as Notification)
+        }
     }
 }
 

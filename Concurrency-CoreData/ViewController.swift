@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.fetchedResultCont = self.tagEntityFetchedResultController()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        NotificationCenter.default.addObserver(self, selector: #selector(managedObjectContextDidSave), name: .NSManagedObjectContextDidSave, object: appDelegate.coreDataHelperObj?.workerMOC)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,12 +46,17 @@ class ViewController: UIViewController {
         fetchedResultCont = NSFetchedResultsController(fetchRequest: fetchrequest, managedObjectContext: (appDelegate.coreDataHelperObj?.mainMOC)!, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultCont.delegate = self
         
-        do {
-            try fetchedResultCont.performFetch()
-//            appDelegate.coreDataHelperObj?.saveMainContext()
-            self.tabelView.reloadData()
-        } catch let error as NSError {
-            fatalError("\(error.userInfo)")
+        self.performFetcht()
+    }
+    
+    func performFetcht()  {
+        DispatchQueue.main.async {
+            do {
+                try self.fetchedResultCont.performFetch()
+                self.tabelView.reloadData()
+            } catch let error as NSError {
+                fatalError("\(error.userInfo)")
+            }
         }
     }
     @IBAction func copyButtonMethod(_ sender: Any) {
@@ -66,10 +69,13 @@ class ViewController: UIViewController {
                 
                 if let allTagsArray = try appDelegate.coreDataHelperObj?.workerMOC.fetch(fetchReq) {
                     for tagObj  in allTagsArray {
-                        let unwrapTagObj : TagEntity = tagObj
+                        let unwrapTagObj : TagEntity = tagObj as TagEntity
+                        let tagStr : String = unwrapTagObj.tag ?? ""
                         var index = 0
+                        
                         for _ in 0...10 {
-                            unwrapTagObj.copyManagedObject(copyToManagedObjectContext: (appDelegate.coreDataHelperObj?.workerMOC)!)
+                            
+                            let newObj = self.createNewTagEntity(tagName: tagStr,context: (appDelegate.coreDataHelperObj?.workerMOC)!)
                             index += 1
 
                             if (index % 10) == 0 {
@@ -79,6 +85,8 @@ class ViewController: UIViewController {
                     }
                     if appDelegate.coreDataHelperObj?.workerMOC.hasChanges == true {
                         appDelegate.coreDataHelperObj?.saveWorkerContext()
+                        
+                        self.performFetcht()
                     }
                 }
             } catch let error as NSError {
@@ -161,6 +169,8 @@ class ViewController: UIViewController {
 //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //            appDelegate.coreDataHelperObj?.mainMOC.mergeChanges(fromContextDidSave: notification as Notification)
 //        }
+        
+        self.performFetcht()
     }
 }
 

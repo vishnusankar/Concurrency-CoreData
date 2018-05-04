@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var context : NSManagedObjectContext?
     
     @IBOutlet weak var tabelView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,9 +29,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func descendingOrderButtonMethod(_ sender: Any) {
        self.sortingManagedObjects(ascendingOrder: false)
     }
+    
     @IBAction func ascendingOrderButtonMethod(_ sender: Any) {
         
         self.sortingManagedObjects(ascendingOrder: true)
@@ -59,6 +62,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func copyButtonMethod(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -93,8 +97,8 @@ class ViewController: UIViewController {
                 fatalError("Unresoved error")
             }
         })
-        
     }
+    
     @IBAction func addTagButtonMethdo(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -111,7 +115,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
     
     func createNewTagEntity(tagName : String, context : NSManagedObjectContext) -> TagEntity {
 
@@ -163,13 +166,6 @@ class ViewController: UIViewController {
     }
     
     @objc func managedObjectContextDidSave(notification : NSNotification) {
-//        guard let userInfo = notification.userInfo else { return }
-//        DispatchQueue.main.async {
-//        
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            appDelegate.coreDataHelperObj?.mainMOC.mergeChanges(fromContextDidSave: notification as Notification)
-//        }
-        
         self.performFetcht()
     }
 }
